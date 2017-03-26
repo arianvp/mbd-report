@@ -3,7 +3,10 @@
 
 let
   texpkgs = pkgs.texlive.combine {
-    inherit (pkgs.texlive) scheme-small latexmk;
+    inherit (pkgs.texlive)
+      scheme-small
+      latexmk
+      algorithmicx;
   };
 in
   pkgs.stdenv.mkDerivation {
