@@ -7,7 +7,11 @@ let
       scheme-small
       latexmk
       algorithmicx
-      minted;
+      minted
+      ifplatform
+      xstring
+      lineno
+      framed;
   };
 in
   pkgs.stdenv.mkDerivation {
@@ -15,6 +19,8 @@ in
     src = pkgs.lib.cleanSource ./.;
     buildInputs = [ 
       texpkgs
+      pkgs.which # used to find  pygments by minted
+      pkgs.pythonPackages.pygments
     ];
   }
 

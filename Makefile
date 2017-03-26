@@ -6,7 +6,7 @@ src ?= .
 out ?= .
 
 report.pdf: 
-	latexmk -use-make -pdf -shell-escape
+	latexmk -use-make -pdf -shell-escape 
 
 all:
 	report.pdf
