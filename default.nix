@@ -12,12 +12,5 @@ in
     buildInputs = [ 
       texpkgs
     ];
-/*    buildPhase = ''
-      latexmk -pdf report.tex
-    '';
-    installPhase = ''
-      mkdir -p $out
-      cp report.pdf $out/
-    '';*/
   }
 
