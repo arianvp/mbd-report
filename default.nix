@@ -6,7 +6,8 @@ let
     inherit (pkgs.texlive)
       scheme-small
       latexmk
-      algorithmicx;
+      algorithmicx
+      minted;
   };
 in
   pkgs.stdenv.mkDerivation {
