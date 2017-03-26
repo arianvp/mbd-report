@@ -1,12 +1,12 @@
-# Latex is a magical creature. it might be wrong about report.pdf
+#Latex is a magical creature. it might be wrong about report.pdf
 # needing an update. hence phony
 .PHONY: report.pdf all install clean
 
 src ?= .
 out ?= .
 
-report.pdf: ${src}/report.tex
-	latexmk ${src}/report.tex -use-make -pdf -shell-escape
+report.pdf: 
+	latexmk -use-make -pdf -shell-escape
 
 all:
 	report.pdf
