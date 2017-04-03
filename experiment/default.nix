@@ -17,6 +17,6 @@ in
   pkgs.pythonPackages.buildPythonPackage {
     name = "mbd-0.0.1";
     src = lib.cleanSource ./.;
-    propagatedBuildInputs = [ fim ];
+    propagatedBuildInputs = [ fim pkgs.pythonPackages.numpy ];
     
   }

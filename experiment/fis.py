@@ -1,10 +1,7 @@
 import fim
 import sys
 
-def load_transactions(filename):
-    with open(filename) as f:
-        return [x.split() for x in f]
-
+from data import load_transactions
 
 if __name__ == '__main__':
     filename = sys.argv[1]
